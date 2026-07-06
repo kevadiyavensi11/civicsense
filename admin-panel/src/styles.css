@@ -1,0 +1,121 @@
+@import 'leaflet/dist/leaflet.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ==========================================================================
+   CIVIC SENSE - MODERATED GOVERNMENT DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* --- COLORS: Admin Specific Variation --- */
+  --primary: #0F172A;    /* Slate 900 - Strict Authority */
+  --secondary: #2563EB;  /* Modern Blue */
+  --accent: #3B82F6;
+  
+  --bg-main: #FFFFFF;    /* Pure White for clean admin look */
+  --bg-card: #FFFFFF;
+  --bg-surface-alt: #F8FAFC; /* Very light gray for hover/header */
+  --bg-body: #FFFFFF;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --text-tertiary: #64748B;
+  
+  --border-light: #F1F5F9;
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  --nav-height: 64px;
+  --sidebar-width: 260px;
+  --radius-md: 8px;
+}
+
+/* DARK THEME ROOT OVERRIDES */
+body.dark-theme {
+  --bg-main: #0A0E1A;
+  --bg-card: #111827;
+  --bg-surface-alt: rgba(255,255,255,0.03);
+  --bg-body: #0A0E1A;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --primary: #F8FAFC;
+  --border-light: rgba(255,255,255,0.05);
+}
+
+/* Global Material Overrides for Dark Mode Visibility */
+body.dark-theme .mat-mdc-select-arrow { color: rgba(255, 255, 255, 0.5) !important; }
+body.dark-theme .mat-mdc-paginator-navigation-next mat-icon,
+body.dark-theme .mat-mdc-paginator-navigation-previous mat-icon,
+body.dark-theme .mat-mdc-paginator-navigation-last mat-icon,
+body.dark-theme .mat-mdc-paginator-navigation-first mat-icon { 
+  color: white !important; 
+}
+
+body.dark-theme input.mat-mdc-input-element {
+  color: white !important;
+}
+
+body.dark-theme input::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body.dark-theme .mat-mdc-form-field-icon-prefix mat-icon,
+body.dark-theme .mat-mdc-form-field-icon-suffix mat-icon {
+  color: #94A3B8 !important;
+}
+
+body.dark-theme .mat-mdc-select-value,
+body.dark-theme .mat-mdc-floating-label,
+body.dark-theme .mat-mdc-form-field-label {
+  color: white !important;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--primary); }
+
+.card {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 24px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: #1e293b; }
+
+.btn-secondary { background: var(--secondary); color: white; }
+.btn-secondary:hover { background: #1d4ed8; }
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Global Dialog Rounding Override */
+.mdc-dialog__surface, .mat-mdc-dialog-surface {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}

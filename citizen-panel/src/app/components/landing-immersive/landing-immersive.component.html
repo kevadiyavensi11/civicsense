@@ -1,0 +1,29 @@
+<div class="ag-scene ag-container">
+
+    <!-- 3D Perspective Grid Background -->
+    <div class="data-grid"></div>
+
+    <div class="core-system">
+
+        <!-- Main Title Node (Floating Header) -->
+        <div class="main-node ag-anim-float">
+            <p class="ag-accent-text">System Online // v2.4.0</p>
+            <h1 class="ag-neon-text">CIVIC SENSE</h1>
+        </div>
+
+        <!-- Floating Modules (Cards) -->
+        <div class="modules-orbit">
+            <div *ngFor="let mod of systemModules; let i = index" class="ag-glass-panel module-card ag-anim-float"
+                [style.animationDelay]="mod.delay" [routerLink]="mod.link">
+
+                <span class="module-icon">{{mod.icon}}</span>
+                <span class="module-title">{{mod.title}}</span>
+                <p class="module-desc">{{mod.desc}}</p>
+
+                <div class="module-status">{{mod.status}}</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
